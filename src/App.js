@@ -2,7 +2,7 @@
 import './App.css';
 import HomePage from "./Component/HomePage";
 import React, { Component } from "react";
-import PizzaDetail from "./Component/Pizza"
+import PizzaDetail from "./Component/PizzaDetail"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 

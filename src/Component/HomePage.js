@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Pizza from "./Pizza"
 import Navbar from "./Navbar";
+
 export default class HomePage extends Component {
 
 render() {

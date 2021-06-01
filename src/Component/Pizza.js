@@ -7,8 +7,6 @@ render() {
         <div>
             <li>{name}</li>
             <img src={image} onClick={() => this.props.selectPizza(this.props.pizza, this.props)}/>
-            
-            
         </div>
     )
 }
