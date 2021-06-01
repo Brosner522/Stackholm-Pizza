@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 import Pizza from "./Pizza"
-export default class HomePage extends Component { 
+import Navbar from "./Navbar";
+export default class HomePage extends Component {
 
 render() {
     return(
         <div>
-            {/* {console.log(this.props.pizzas)} */}
+            <h2>Stackholm Pizza</h2>
+            <Navbar />
+            {this.props.pizzas.map(pizza => {
+                return 
+                <Pizza pizza={pizza} key={pizza.id} history={this.props.history} selectPizza={this.props.selectPizza}/>
+            })}
+   
         </div>
     )
 }
 }
+
 
 
 

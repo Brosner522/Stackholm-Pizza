@@ -1,34 +1,57 @@
 
 import './App.css';
-import Navbar from "./Component/Navbar";
 import HomePage from "./Component/HomePage";
 import React, { Component } from "react";
+import PizzaDetail from "./Component/Pizza"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 class App extends Component { 
 
   state = {
-    pizzas: {},
-    customers: {},
-    orders: {},
-    toppings:{}
+    pizzas: [],
+    selectPizza: {},
+    toppings:[]
+  }
+
+  selectPizzaHandle = (pizzaObj, props) => {
+      this.setState({
+        selectPizza:pizzaObj
+      })
+      props.history.push("/pizza")
   }
 
   componentDidMount() {
     fetch("http://localhost:9292/pizzas")
     .then(res => res.json())
     .then(pizzas => this.setState({pizzas}))
-
- 
-  
   }
 
   render() {
     console.log("here")
     return (
-      <div className="App">
-          <Navbar /> 
-          <HomePage pizzas={this.state.pizzas} customers={this.state.customers} orders={this.state.orders} toppings={this.state.toppings} />
-      </div>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path = "/" 
+              component = {(props) => (
+                <div>
+                <HomePage  {...props} pizzas={this.state.pizzas} toppings={this.state.toppings} selectPizza={this.selectPizzaHandle} /> 
+                </div>     
+              )}
+            />
+
+          <Route exact path = "/PizzaDetail" 
+              component = {(props) => (
+                <div>
+                <PizzaDetail  {...props} pizza={this.state.selectPizza} /> 
+                </div>     
+              )}
+            />      
+          </Switch>
+        </div>
+      </Router>
+
     );
   }
 

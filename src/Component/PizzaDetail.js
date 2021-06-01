@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-export default class Pizza extends Component { 
+export default class PizzaDetail extends Component { 
 
 render() {
     const {name, image, description, price, topping_id } = this.props.pizza
@@ -8,6 +8,8 @@ render() {
         <div>
             <li>{name}</li>
             <img src={image} />
+            <li>{description}</li>
+            <li>{price}</li>
         </div>
     )
 }
