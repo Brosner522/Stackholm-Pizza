@@ -18,7 +18,7 @@ class App extends Component {
       this.setState({
         selectPizza:pizzaObj
       })
-      props.history.push("/pizza")
+      props.history.push("/PizzaDetail")
   }
 
   componentDidMount() {
@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   render() {
-    console.log("here")
+
     return (
       <Router>
         <div>

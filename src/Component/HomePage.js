@@ -9,10 +9,10 @@ render() {
             <h2>Stackholm Pizza</h2>
             <Navbar />
             {this.props.pizzas.map(pizza => {
-                return 
+                return (
                 <Pizza pizza={pizza} key={pizza.id} history={this.props.history} selectPizza={this.props.selectPizza}/>
+            )
             })}
-   
         </div>
     )
 }
