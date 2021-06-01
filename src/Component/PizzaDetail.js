@@ -6,6 +6,11 @@ export default class PizzaDetail extends Component {
         
     }
 
+    handleOrder = () => {
+        this.props.history.push("/order")
+    }
+
+
     render() {
     const {name, image, description, price, topping_id } = this.props.pizza
     return(
@@ -13,7 +18,8 @@ export default class PizzaDetail extends Component {
              { 
             Object.keys(this.props.pizza).length !== 0 
             ? <div>
-            <button onClick={this.handleHome}>home </button>
+            <button onClick={this.handleHome}>Home </button>
+            <button onClick={this.handleOrder}>Place Order</button>
             <li>{name}</li>
             <img src={image} />
             <li>{description}</li>
@@ -21,10 +27,15 @@ export default class PizzaDetail extends Component {
           </div>
           :this.props.history.push("/")
             }
+
+
         </div>
     )
 }
 }
+
+
+
 
 
 
