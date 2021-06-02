@@ -2,8 +2,9 @@
 import './App.css';
 import HomePage from "./Component/HomePage";
 import React, { Component } from "react";
-import PizzaDetail from "./Component/PizzaDetail"
-import Order from "./Component/Order"
+import PizzaDetail from "./Component/PizzaDetail";
+import Order from "./Component/Order";
+import Login from "./Component/Login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
@@ -12,7 +13,9 @@ class App extends Component {
   state = {
     pizzas: [],
     selectPizza: {},
-    toppings:[]
+    toppings:[],
+    customers: [],
+    loginUser: {}
   }
 
   selectPizzaHandle = (pizzaObj, props) => {
@@ -21,6 +24,18 @@ class App extends Component {
       })
       props.history.push("/pizzaDetail")
   }
+  
+  handleHome = (props) => {
+   props.history.push("/")
+    
+}
+
+ handleLoginUser = (loginUserObj) => {
+   this.setState({
+    loginUser: loginUserObj
+   })
+ }
+
 
   componentDidMount() {
     fetch("http://localhost:9292/pizzas")
@@ -30,6 +45,10 @@ class App extends Component {
     fetch("http://localhost:9292/topping")
     .then(res => res.json())
     .then(toppings => this.setState({toppings}))
+
+    fetch("http://localhost:9292/customer")
+    .then(res => res.json())
+    .then(customers => this.setState({customers}))
   }
 
   render() {
@@ -49,17 +68,24 @@ class App extends Component {
           <Route exact path = "/pizzaDetail" 
               component = {(props) => (
                 <div>
-                <PizzaDetail  {...props} pizza={this.state.selectPizza} /> 
+                <PizzaDetail  {...props} pizza={this.state.selectPizza} home={this.handleHome} /> 
                 </div>     
               )}
             /> 
             <Route exact path = "/order" 
               component = {(props) => (
                 <div>
-                <Order  {...props} pizza={this.state.selectPizza} topping={this.state.toppings} /> 
+                <Order  {...props} pizza={this.state.selectPizza} topping={this.state.toppings} home={this.handleHome} /> 
                 </div>     
               )}
-            />     
+            />
+             <Route exact path = "/login" 
+              component = {(props) => (
+                <div>
+                <Login  {...props} customers={this.state.customers} loginUser={this.handleLoginUser}/> 
+                </div>     
+              )}
+            />   
           </Switch>
         </div>
       </Router>
