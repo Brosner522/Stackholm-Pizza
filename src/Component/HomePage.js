@@ -10,11 +10,11 @@ export default class HomePage extends Component {
   render() {
     console.log(Object.keys(this.props.loginUser).length)
     return (
-      <div>
+      <div className="container">
         <h2>Stackholm Pizza</h2>
         <h3>You might not like us at first but you'll learn to love us!</h3>
         {Object.keys(this.props.loginUser).length === 0 
-          ?<button onClick={this.handleClickLogin}>Login</button>
+          ?<button className="login" onClick={this.handleClickLogin}>Login</button>
           :<button onClick={() => this.props.handleClickSignOut(this.props)}>Sign out</button>
         } 
         {this.props.pizzas.map((pizza) => {

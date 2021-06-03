@@ -43,10 +43,10 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div>
+      <body className="text-center">
       <main className="form-signin">
         {
-          <form onSubmit={(e) => this.handleLogin(e)}>
+          <form onSubmit={(e) => this.handleLogin(e)} >
             <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
             
             <div className="form-floating">
@@ -58,16 +58,15 @@ export default class Login extends Component {
             onChange={(e) =>
             this.setState({ userName: e.target.value.toLowerCase() })}
             />
-            <label htmlFor="floatingInput">Username</label>
+            <label htmlFor="floatingInput"></label>
             </div>
-          
-            <br />
-            <button>Log in</button>
+            <button className="w-48 btn btn-lg btn-primary">Log in</button>
           </form>
         }
       </main>
-        <button onClick={this.handleSignUp}> Sign up </button>
-      </div>
+        <button onClick={this.handleSignUp} className="w-45 btn btn-lg btn-primary"> Sign up </button>
+        {/* <Button variant="primary" size="lg"> test </Button> */}
+      </body>
     );
   }
 }
@@ -86,3 +85,4 @@ export default class Login extends Component {
               }
             /> */}
              {/* <label for="floatingInput">User Name</label> */}
+

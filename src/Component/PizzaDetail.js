@@ -11,7 +11,7 @@ export default class PizzaDetail extends Component {
     render() {
     const {name, image, description, price, topping_id } = this.props.pizza
     return(
-        <div>  
+        <div className="pizza-detail">  
              { 
             Object.keys(this.props.pizza).length !== 0 
             ? <div>

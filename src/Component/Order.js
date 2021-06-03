@@ -39,17 +39,15 @@ export default class Order extends Component {
   }
   
   render() {
-    console.log(this.state.toppingPrice)
-    console.log(this.handleRemoveTopping);
     return( 
 
       Object.keys(this.props.pizza).length !== 0 
-      ? <div>
+      ? <div className="order">
           <button onClick={() => this.props.home(this.props)}>Home </button>
           <li>{this.props.pizza.name}</li>
           <img src={this.props.pizza.image} />
           <li>Total Price ${this.totalPrice()}.00</li>
-          <h2>Please select a topping you would like to add</h2>
+          <h2>Please select the topping/s that you would like to add</h2>
   
           {this.props.topping.map((topping) => {
   
