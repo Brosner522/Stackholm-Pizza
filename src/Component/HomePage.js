@@ -6,13 +6,17 @@ export default class HomePage extends Component {
     this.props.history.push("/login");
   };
 
+
   render() {
+    console.log(Object.keys(this.props.loginUser).length)
     return (
       <div>
         <h2>Stackholm Pizza</h2>
         <h3>You might not like us at first but you'll learn to love us!</h3>
-        <button onClick={this.handleClickLogin}>Login</button>
-        {/* <button>Sign up</button> */}
+        {Object.keys(this.props.loginUser).length === 0 
+          ?<button onClick={this.handleClickLogin}>Login</button>
+          :<button onClick={() => this.props.handleClickSignOut(this.props)}>Sign out</button>
+        } 
         {this.props.pizzas.map((pizza) => {
           return (
             <Pizza

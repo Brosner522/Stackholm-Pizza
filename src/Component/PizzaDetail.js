@@ -15,7 +15,7 @@ export default class PizzaDetail extends Component {
              { 
             Object.keys(this.props.pizza).length !== 0 
             ? <div>
-            <button onClick={() => this.props.handleHome(this.props)}>Home </button>
+            <button onClick={() => this.props.home(this.props)}>Home </button>
             <button onClick={this.handleOrder}>Place Order</button>
             <li>{name}</li>
             <img src={image} />
