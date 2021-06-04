@@ -17,7 +17,7 @@ export default class HomePage extends Component {
         </div>
         {Object.keys(this.props.loginUser).length === 0 
           ?<button className="w-48 btn btn-lg btn-primary" onClick={this.handleClickLogin}>Login</button>
-          :<button onClick={() => this.props.handleClickSignOut(this.props)}>Sign out</button>
+          :<button className="w-45 btn btn-lg btn-primary" onClick={() => this.props.handleClickSignOut(this.props)}>Sign out</button>
         }
         <br />
         {this.props.pizzas.map((pizza) => {

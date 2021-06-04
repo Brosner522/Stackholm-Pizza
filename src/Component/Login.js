@@ -64,8 +64,8 @@ export default class Login extends Component {
           </form>
         }
       </main>
-        <button onClick={this.handleSignUp} className="w-45 btn btn-lg btn-primary"> Sign up </button>
-        {/* <Button variant="primary" size="lg"> test </Button> */}
+        <button  onClick={this.handleSignUp} className="w-45 btn btn-lg btn-primary"> Sign up </button>
+        
       </body>
     );
   }
