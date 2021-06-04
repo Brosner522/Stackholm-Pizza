@@ -43,10 +43,10 @@ export default class Order extends Component {
 
       Object.keys(this.props.pizza).length !== 0 
       ? <div className="order">
-          <button onClick={() => this.props.home(this.props)}>Home </button>
-          <li>{this.props.pizza.name}</li>
-          <img src={this.props.pizza.image} />
-          <li>Total Price ${this.totalPrice()}.00</li>
+          <button  className="w-48 btn btn-lg btn-primary" id="home" onClick={() => this.props.home(this.props)}>Home </button>
+          <li className="pizza-name" id="name" >{this.props.pizza.name}</li>
+          <img className="details-pic" src={this.props.pizza.image} />
+          <li className="pizza-name" id="price">Total Price ${this.totalPrice()}.00</li>
           <h2>Please select the topping/s that you would like to add</h2>
   
           {this.props.topping.map((topping) => {
@@ -54,7 +54,7 @@ export default class Order extends Component {
             return <Topping topping={topping} key={topping.id} handleSelectTopping={this.handleSelectTopping} selectTopping={this.state.selectTopping}
             handleToppingPrice={this.handleAdd} handleRemoveTopping={this.handleRemoveTopping}/> })}
 
-          <button onClick={this.handlePlaceOrder}>Place Order</button>
+          <button  className="w-48 btn btn-lg btn-primary" id="order" onClick={this.handlePlaceOrder}>Place Order</button>
         </div>
         :this.props.history.push("/")
 

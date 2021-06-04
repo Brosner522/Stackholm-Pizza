@@ -11,12 +11,15 @@ export default class HomePage extends Component {
     console.log(Object.keys(this.props.loginUser).length)
     return (
       <div className="container">
-        <h2>Stackholm Pizza</h2>
-        <h3>You might not like us at first but you'll learn to love us!</h3>
+        <div className="header">
+        <h2 id="title">Welcome To Stackholm Pizza</h2>
+        <h3 id="sub-title">One bite and you're hooked, guaranteed!</h3>
+        </div>
         {Object.keys(this.props.loginUser).length === 0 
-          ?<button className="login" onClick={this.handleClickLogin}>Login</button>
+          ?<button className="w-48 btn btn-lg btn-primary" onClick={this.handleClickLogin}>Login</button>
           :<button onClick={() => this.props.handleClickSignOut(this.props)}>Sign out</button>
-        } 
+        }
+        <br />
         {this.props.pizzas.map((pizza) => {
           return (
             <Pizza

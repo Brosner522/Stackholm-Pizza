@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -30,15 +31,28 @@ code {
   z-index: 2;
 }
 
-.login {
-  text-align: center;
+.container .login {
+  text-align: right;
+  padding: 10px;
+  margin: 20px, 10px, 50px 400px;
+}
+
+.header {
+  background-color: rgba(228, 20, 37, 0.842);
+  width: 100%
+}
+
+.header #title {
+  padding-top: 20px
+}
+.header #sub-title {
+  padding-bottom: 20px;
 }
 
 img {
-  width:  200px;
-  height: 200px;
-  padding:1px;
-   border:1px solid #021a40;
+  width:  250px;
+  height: 250px;
+  padding: 1px;
 }
 
 .pizza {
@@ -61,19 +75,121 @@ img {
 
 .container {
   text-align: center;
-  background: rgb(212, 212, 38);
-  
+  background-image: url("https://i.pinimg.com/originals/90/b0/59/90b0596e15ae7facac3ed5736d962a00.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:auto;
+  z-index: -1
 }
 
 .pizza-detail {
   text-align: center;
   border: 5px solid rgba(33, 165, 21, 0.842);
+  height: 1319px
+}
+
+.pizza-detail #home {
+  margin-top: 30px;
+  margin-right: 0;
+  margin-left: 1200px;
+
+}
+
+.pizza-detail #order {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.pizza-detail #name {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+
+.details-pic {
+  width: 500px;
+  height: 500px
 }
 
 .order {
   text-align: center;
 }
 
+.topping-top {
+  text-align: left; 
+  margin-top: 30px;
+  margin-left: 860px;
+
+}
+
 .topping {
-  border: 5px solid rgba(33, 165, 21, 0.842);
+  display: inline-block;
+  padding: 20px; 
+	
+}
+
+.topping .topping-form {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+
+.pizza-pic:hover {
+  padding: 5px;
+  box-shadow: 50px 30px 40px 0 rgba(0,0,0,0.2);
+}
+
+.details-pic:hover  {
+  box-shadow: 50px 30px 40px 0 rgba(0,0,0,.2);
+}
+
+li.pizza-name {
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.842);
+  margin-top: 50px
+}
+
+.pizza-detail #description {
+  margin-top: 50px;
+  margin-left:500px;
+  margin-right:500px;
+  text-align: justify;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.pizza-detail #price {
+  font-size: 25px;
+  font-weight: 600
+}
+
+.w-48 {
+  cursor:pointer 
+}
+
+.order #home{
+  margin-top: 50px;
+  margin-left: 1300px;
+}
+
+.order #name {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.order #price {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.order #order{
+  margin-top: 30px;
+  margin-bottom: 50px;
 }

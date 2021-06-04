@@ -15,12 +15,12 @@ export default class PizzaDetail extends Component {
              { 
             Object.keys(this.props.pizza).length !== 0 
             ? <div>
-            <button onClick={() => this.props.home(this.props)}>Home </button>
-            <button onClick={this.handleOrder}>Place Order</button>
-            <li>{name}</li>
-            <img src={image} />
-            <li>{description}</li>
-            <li>${price}</li>
+            <button className="w-48 btn btn-lg btn-primary" id="home" onClick={() => this.props.home(this.props)}>Home </button>
+            <button className="w-48 btn btn-lg btn-primary" id="order" onClick={this.handleOrder}>Place Order</button>
+            <li className="pizza-name" id="name">{name}</li>
+            <img className="details-pic" src={image} />
+            <li className="pizza-name" id="price" >Price: ${price}.00</li>
+            <p className="pizza-name" id="description">{description}</p>
           </div>
           :this.props.history.push("/")
             }
@@ -28,9 +28,6 @@ export default class PizzaDetail extends Component {
     )
 }
 }
-
-
-
 
 
 

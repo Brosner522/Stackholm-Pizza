@@ -6,16 +6,7 @@ export default class Topping extends Component {
       buttonFlag: false
     }
 
-    // handleFlag = () => {
-    //   this.setState({
-    //     buttonFlag: !this.state.buttonFlag
-    //   })
-    //   if(this.state.buttonFlag === false) {
-    //     this.props.handleToppingPrice(this.state.price)
-    //   }else {
-    //     this.props.handleRemoveTopping(this.state.price)
-    //   }
-    // }
+
     handleAdd = () => {
       this.props.handleToppingPrice (this.state.price)
       this.setState({
@@ -33,9 +24,9 @@ export default class Topping extends Component {
 
     render() {
     return (
-      <div>
+      <div className="topping-top">
       <div className="topping">
-        <form>
+        <form className="topping-form">
           <label>
             <input
               type="radio"
@@ -49,8 +40,8 @@ export default class Topping extends Component {
         </form> 
       </div>
       {this.state.buttonFlag
-      ?<button onClick={() => this.handleRemove() }>Remove</button> 
-      :<button onClick={() => this.handleAdd()}>Add</button>
+      ?<button className="w-48 btn btn-lg btn-primary" id="button" onClick={() => this.handleRemove() }>Remove</button> 
+      :<button className="w-48 btn btn-lg btn-primary" id="button" onClick={() => this.handleAdd()}>Add</button>
       }
       </div>
     );
