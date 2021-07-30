@@ -1,6 +1,5 @@
 {
-  "pizzas": [
-    {
+  "pizzas": [{
       "id": 1,
       "name": "Garden Fresh Pizza",
       "description": "All your favorite veggies together on a delightfully delicious pizza. Loaded with crisp green peppers, fresh-cut onions, mushrooms, ripe black olives, vine-ripened Roma tomatoes, and real cheese made from mozzarella.",
@@ -8,14 +7,13 @@
       "toppingId": 1
     },
     {
-        "name": "Cheese Pizza " , 
-        "price": 12,
-        "description": "Everyone loves the classics, just cheese and our famous sauce.", 
-        "toppingId": 2
+      "name": "Cheese Pizza ",
+      "price": 12,
+      "description": "Everyone loves the classics, just cheese and our famous sauce.",
+      "toppingId": 2
     }
   ],
-  "customer": [
-    {
+  "customer": [{
       "id": 1,
       "name": "Barak"
     },
@@ -25,7 +23,7 @@
     }
   ],
 
-  
+
   "order": [{
     "pizzaId": 1,
     "customerId": 1,

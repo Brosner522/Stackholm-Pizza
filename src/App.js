@@ -34,10 +34,10 @@ class App extends Component {
 
   handleClickSignOut = (props) => {
     this.setState({
-      loginUser: {}
-    })
-    props.history.push("/")
-  }
+      loginUser: {},
+    });
+    props.history.push("/login");
+  };
 
   componentDidMount() {
     fetch("http://localhost:9292/pizzas")
@@ -97,7 +97,7 @@ class App extends Component {
                     {...props}
                     pizza={this.state.selectPizza}
                     topping={this.state.toppings}
-                    home={this.handleHome} 
+                    home={this.handleHome}
                   />
                 </div>
               )}

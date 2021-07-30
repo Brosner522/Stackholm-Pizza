@@ -7,7 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -26,7 +25,6 @@ code {
   border-bottom-left-radius: 0;
 }
 
-
 .form-signin .form-floating:focus-within {
   z-index: 2;
 }
@@ -39,18 +37,19 @@ code {
 
 .header {
   background-color: rgba(228, 20, 37, 0.842);
-  width: 100%
+  width: 100%;
 }
 
 .header #title {
-  padding-top: 20px
+  padding-top: 20px;
 }
+
 .header #sub-title {
   padding-bottom: 20px;
 }
 
 img {
-  width:  250px;
+  width: 250px;
   height: 250px;
   padding: 1px;
 }
@@ -79,21 +78,20 @@ img {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  width:auto;
-  z-index: -1
+  width: auto;
+  z-index: -1;
 }
 
 .pizza-detail {
   text-align: center;
   border: 5px solid rgba(33, 165, 21, 0.842);
-  height: 1319px
+  height: 1319px;
 }
 
 .pizza-detail #home {
   margin-top: 30px;
   margin-right: 0;
   margin-left: 1200px;
-
 }
 
 .pizza-detail #order {
@@ -108,10 +106,9 @@ img {
   font-weight: 900;
 }
 
-
 .details-pic {
   width: 500px;
-  height: 500px
+  height: 500px;
 }
 
 .order {
@@ -119,16 +116,14 @@ img {
 }
 
 .topping-top {
-  text-align: left; 
+  text-align: left;
   margin-top: 30px;
   margin-left: 615px;
-
 }
 
 .topping {
   display: inline-block;
-  padding: 20px; 
-	
+  padding: 20px;
 }
 
 .topping .topping-form {
@@ -136,27 +131,25 @@ img {
   font-weight: 600;
 }
 
-
-
 .pizza-pic:hover {
   padding: 5px;
-  box-shadow: 50px 30px 40px 0 rgba(0,0,0,0.2);
+  box-shadow: 50px 30px 40px 0 rgba(0, 0, 0, 0.2);
 }
 
-.details-pic:hover  {
-  box-shadow: 50px 30px 40px 0 rgba(0,0,0,.2);
+.details-pic:hover {
+  box-shadow: 50px 30px 40px 0 rgba(0, 0, 0, 0.2);
 }
 
 li.pizza-name {
   list-style-type: none;
   background-color: rgba(255, 255, 255, 0.842);
-  margin-top: 50px
+  margin-top: 50px;
 }
 
 .pizza-detail #description {
   margin-top: 50px;
-  margin-left:500px;
-  margin-right:500px;
+  margin-left: 500px;
+  margin-right: 500px;
   text-align: justify;
   font-size: 25px;
   font-weight: 600;
@@ -164,14 +157,14 @@ li.pizza-name {
 
 .pizza-detail #price {
   font-size: 25px;
-  font-weight: 600
+  font-weight: 600;
 }
 
 .w-48 {
-  cursor:pointer 
+  cursor: pointer;
 }
 
-.order #home{
+.order #home {
   margin-top: 50px;
   margin-left: 1300px;
 }
@@ -189,7 +182,7 @@ li.pizza-name {
   margin-bottom: 50px;
 }
 
-.order #order{
+.order #order {
   margin-top: 30px;
   margin-bottom: 50px;
 }
